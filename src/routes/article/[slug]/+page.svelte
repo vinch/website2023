@@ -18,6 +18,9 @@
       article.content.replace("ar://", `${ARWEAVE_GATEWAY_URL}/`)
     )}
   </div>
+  <div class="arweave">
+    <a href="{ARWEAVE_GATEWAY_URL}/{article.txId}">View on Arweave</a>
+  </div>
 </article>
 
 <style>
@@ -45,6 +48,7 @@
     font-size: 1.25rem;
     line-height: 1.5em;
     font-weight: 400;
+    margin-bottom: 3rem;
   }
   .content :global(p) {
     margin-bottom: 1rem;
