@@ -1,12 +1,14 @@
 <script>
   import "../app.css";
+
+  const ARWEAVE_GATEWAY_URL = import.meta.env.VITE_ARWEAVE_GATEWAY_URL;
 </script>
 
 <div class="container">
   <header>
     <a href="/">
       <img
-        src="https://arweave.net/_YZkieSBM8gzkiY-vu3zXE5-RmIuku4CJwNJqCjwjZM"
+        src="{ARWEAVE_GATEWAY_URL}/_YZkieSBM8gzkiY-vu3zXE5-RmIuku4CJwNJqCjwjZM"
         alt="vinch.be logo"
       />
     </a>

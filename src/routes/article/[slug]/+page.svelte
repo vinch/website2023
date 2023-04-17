@@ -5,6 +5,8 @@
   export let data: any;
 
   const article = data.article;
+
+  const ARWEAVE_GATEWAY_URL = import.meta.env.VITE_ARWEAVE_GATEWAY_URL;
 </script>
 
 <article>
@@ -13,7 +15,7 @@
   <div class="excerpt">{article.excerpt}</div>
   <div class="content">
     {@html marked.parse(
-      article.content.replace("ar://", "https://arweave.net/")
+      article.content.replace("ar://", `${ARWEAVE_GATEWAY_URL}/`)
     )}
   </div>
 </article>
