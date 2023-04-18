@@ -15,7 +15,7 @@
   <div class="excerpt">{article.excerpt}</div>
   <div class="content">
     {@html marked.parse(
-      article.content.replace("ar://", `${ARWEAVE_GATEWAY_URL}/`)
+      article.content.replaceAll("ar://", `${ARWEAVE_GATEWAY_URL}/`)
     )}
   </div>
   <div class="arweave">
