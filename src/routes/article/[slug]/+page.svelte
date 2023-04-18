@@ -19,7 +19,9 @@
     )}
   </div>
   <div class="arweave">
-    <a href="{ARWEAVE_GATEWAY_URL}/{article.txId}">View on Arweave</a>
+    <a href="{ARWEAVE_GATEWAY_URL}/{article.txId}" target="_blank"
+      >View on Arweave ↗</a
+    >
   </div>
 </article>
 
@@ -77,5 +79,12 @@
     font-size: 1rem;
     line-height: 1.5rem;
     text-align: center;
+  }
+
+  .content :global(h2) {
+    font-size: 32px;
+    line-height: 1.25em;
+    margin: 2rem 0px 1rem;
+    font-weight: 500;
   }
 </style>
