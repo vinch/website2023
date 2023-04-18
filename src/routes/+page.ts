@@ -1,8 +1,10 @@
-const API_URL = import.meta.env.VITE_API_URL;
+export const prerender = true;
 
 export const load = async () => {
   const response = await fetch(
-    `${API_URL}/5GSxHUHfdIIKYAsdmGUEpuKfbsALB7DlwzyA5W-EnZk`
+    `${
+      import.meta.env.VITE_API_URL
+    }/5GSxHUHfdIIKYAsdmGUEpuKfbsALB7DlwzyA5W-EnZk`
   );
   const articles = await response.json();
 
