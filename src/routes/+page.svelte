@@ -45,7 +45,7 @@
 
 <style>
   h1 {
-    font-family: Georgia, "Times New Roman", Times, serif;
+    font-family: "IBM Plex Serif", "Georgia", "Times New Roman", Times, serif;
     font-weight: 400;
     font-size: 10rem;
     line-height: 1em;
@@ -58,7 +58,7 @@
     row-gap: 0.5rem;
   }
   li {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     line-height: 1.5em;
     display: flex;
     column-gap: 1rem;
@@ -66,7 +66,7 @@
     font-weight: 400;
   }
   span {
-    width: 12.5rem;
+    width: 13rem;
     text-align: right;
   }
 </style>

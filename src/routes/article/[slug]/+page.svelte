@@ -51,7 +51,7 @@
     max-width: 800px;
   }
   h1 {
-    font-family: Georgia, "Times New Roman", Times, serif;
+    font-family: "IBM Plex Serif", "Georgia", "Times New Roman", Times, serif;
     font-weight: 400;
     font-size: 4rem;
     line-height: 1em;
@@ -62,13 +62,13 @@
     color: #999;
   }
   .excerpt {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     line-height: 1.5em;
     font-weight: 400;
     margin-bottom: 3rem;
   }
   .content {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     line-height: 1.5em;
     font-weight: 400;
     margin-bottom: 3rem;
@@ -95,17 +95,23 @@
   }
   .content :global(img) + :global(em) {
     display: block;
-    padding-top: 0.5rem;
+    padding-top: 0.75rem;
     color: #999;
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.5rem;
     text-align: center;
+    font-family: "IBM Plex Serif", "Georgia", "Times New Roman", Times, serif;
   }
 
   .content :global(h2) {
-    font-size: 32px;
+    font-size: 2rem;
     line-height: 1.25em;
     margin: 2rem 0px 1rem;
-    font-weight: 500;
+    font-weight: 400;
+    font-family: "IBM Plex Serif", "Georgia", "Times New Roman", Times, serif;
+  }
+
+  .content :global(code) {
+    background: #eee;
   }
 </style>
