@@ -71,7 +71,7 @@
     font-size: 1.2rem;
     line-height: 1.5em;
     font-weight: 400;
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
   }
   .content :global(p) {
     margin-bottom: 1rem;
@@ -92,6 +92,7 @@
     max-width: 100%;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 20px 35px 0px,
       rgba(0, 0, 0, 0.05) 0px 5px 9px 0px;
+    margin: 0 auto;
   }
   .content :global(img) + :global(em) {
     display: block;
