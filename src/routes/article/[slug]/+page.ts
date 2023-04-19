@@ -1,5 +1,3 @@
-export const prerender = true;
-
 export const load = async ({ params }) => {
   const slug = params.slug;
 
