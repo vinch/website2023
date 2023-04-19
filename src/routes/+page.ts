@@ -1,4 +1,4 @@
-export const load = async () => {
+export const load = async ({ fetch }) => {
   const response = await fetch(
     `${
       import.meta.env.VITE_API_URL

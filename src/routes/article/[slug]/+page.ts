@@ -1,4 +1,4 @@
-export const load = async ({ params }) => {
+export const load = async ({ fetch, params }) => {
   const slug = params.slug;
 
   const response = await fetch(
