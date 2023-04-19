@@ -2,7 +2,36 @@
   import { format } from "date-fns";
 
   export let data: any;
+
+  const ARWEAVE_GATEWAY_URL = import.meta.env.VITE_ARWEAVE_GATEWAY_URL;
 </script>
+
+<svelte:head>
+  <title>Le blog de Vincent Battaglia</title>
+  <meta name="description" content="All the articles from Vincent Battaglia" />
+  <meta
+    property="og:description"
+    content="All the articles from Vincent Battaglia"
+  />
+  <meta
+    property="og:image"
+    content={`${ARWEAVE_GATEWAY_URL}/EjnAIpt6EUtJfhSavQLOjAQiv0ZCdYSfsEB-c7qHIDM`}
+  />
+  <meta property="og:title" content="Le blog de Vincent Battaglia" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vinch.be" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:creator" content="@vinchbat" />
+  <meta
+    name="twitter:description"
+    content="All the articles from Vincent Battaglia"
+  />
+  <meta
+    name="twitter:image:src"
+    content={`${ARWEAVE_GATEWAY_URL}/EjnAIpt6EUtJfhSavQLOjAQiv0ZCdYSfsEB-c7qHIDM`}
+  />
+  <meta name="twitter:title" content="Le blog de Vincent Battaglia" />
+</svelte:head>
 
 <h1>Blog</h1>
 <ul>

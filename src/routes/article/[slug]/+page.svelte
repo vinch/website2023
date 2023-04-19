@@ -9,6 +9,27 @@
   const ARWEAVE_GATEWAY_URL = import.meta.env.VITE_ARWEAVE_GATEWAY_URL;
 </script>
 
+<svelte:head>
+  <title>{article.title}</title>
+  <meta name="description" content={article.excerpt} />
+  <meta property="og:description" content={article.excerpt} />
+  <meta
+    property="og:image"
+    content={article.featureImage.replace("ar://", `${ARWEAVE_GATEWAY_URL}/`)}
+  />
+  <meta property="og:title" content={article.title} />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://vinch.be/article/{article.id}" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:creator" content="@vinchbat" />
+  <meta name="twitter:description" content={article.excerpt} />
+  <meta
+    name="twitter:image:src"
+    content={article.featureImage.replace("ar://", `${ARWEAVE_GATEWAY_URL}/`)}
+  />
+  <meta name="twitter:title" content={article.title} />
+</svelte:head>
+
 <article>
   <h1>{article.title}</h1>
   <div class="date">{format(article.publishDate, "PPP")}</div>
