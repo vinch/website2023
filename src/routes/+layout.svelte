@@ -61,4 +61,10 @@
       margin-top: 6.25rem;
     }
   }
+
+  @media (max-width: 600px) {
+    main {
+      padding: 5rem 2rem;
+    }
+  }
 </style>
