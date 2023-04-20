@@ -23,6 +23,7 @@
 	"dependencies": {
 		"@types/marked": "^4.0.8",
 		"date-fns": "^2.29.3",
-		"marked": "^4.3.0"
+		"marked": "^4.3.0",
+		"xml-js": "^1.6.11"
 	}
 }

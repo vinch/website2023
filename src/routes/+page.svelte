@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-  <title>Le blog de Vincent Battaglia</title>
+  <title>Blog of Vincent Battaglia, aka Vinch</title>
   <meta name="description" content="All the articles from Vincent Battaglia" />
   <meta
     property="og:description"
@@ -17,7 +17,7 @@
     property="og:image"
     content={`${ARWEAVE_GATEWAY_URL}/EjnAIpt6EUtJfhSavQLOjAQiv0ZCdYSfsEB-c7qHIDM`}
   />
-  <meta property="og:title" content="Le blog de Vincent Battaglia" />
+  <meta property="og:title" content="Blog of Vincent Battaglia, aka Vinch" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://vinch.be" />
   <meta name="twitter:card" content="summary" />
@@ -30,7 +30,7 @@
     name="twitter:image:src"
     content={`${ARWEAVE_GATEWAY_URL}/EjnAIpt6EUtJfhSavQLOjAQiv0ZCdYSfsEB-c7qHIDM`}
   />
-  <meta name="twitter:title" content="Le blog de Vincent Battaglia" />
+  <meta name="twitter:title" content="Blog of Vincent Battaglia, aka Vinch" />
 </svelte:head>
 
 <h1>Blog</h1>
