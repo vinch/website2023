@@ -5,6 +5,8 @@ import { format } from "date-fns";
 const ITEMS_NUMBER = 20;
 const ARWEAVE_GATEWAY_URL = import.meta.env.VITE_ARWEAVE_GATEWAY_URL;
 
+export const prerender = true;
+
 export async function GET({ fetch }: { fetch: any }) {
   const response = await fetch(
     `${
