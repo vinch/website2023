@@ -25,7 +25,12 @@
   header {
     padding-top: 3.125rem;
     width: 9.375rem;
-    text-align: right;
+  }
+  header img {
+    display: block;
+    width: 6.25rem;
+    height: 6.25rem;
+    float: right;
   }
   main {
     flex: 1;
@@ -33,5 +38,27 @@
     overflow: auto;
     border-left: 1px solid #000;
     padding: 5rem;
+  }
+
+  @media (max-width: 800px) {
+    .container {
+      flex-direction: column;
+    }
+    header {
+      width: 100%;
+      padding: 0;
+      position: fixed;
+      top: 0;
+      background: #fff;
+      border-bottom: 1px solid #000;
+    }
+    header img {
+      float: none;
+    }
+    main {
+      padding: 5rem 3rem;
+      border-left: 0;
+      margin-top: 6.25rem;
+    }
   }
 </style>

@@ -69,4 +69,17 @@
     width: 13rem;
     text-align: right;
   }
+  a {
+    flex: 1;
+  }
+  @media (max-width: 800px) {
+    li {
+      flex-direction: column;
+      margin-bottom: 1rem;
+    }
+    span {
+      width: auto;
+      text-align: left;
+    }
+  }
 </style>
