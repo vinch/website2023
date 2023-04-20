@@ -74,6 +74,9 @@
     flex: 1;
   }
   @media (max-width: 800px) {
+    h1 {
+      font-size: 8rem;
+    }
     li {
       flex-direction: column;
       margin-bottom: 1rem;
