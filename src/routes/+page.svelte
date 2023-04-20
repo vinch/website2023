@@ -38,7 +38,7 @@
   {#each data.articles as article}
     <li>
       <span>{format(article.publishDate, "PPP")}</span>
-      <a href="/article/{article.id}">{article.title}</a>
+      <strong><a href="/article/{article.id}">{article.title}</a></strong>
     </li>
   {/each}
 </ul>
@@ -69,7 +69,8 @@
     width: 13rem;
     text-align: right;
   }
-  a {
+  strong {
+    font-weight: 400;
     flex: 1;
   }
   @media (max-width: 800px) {
