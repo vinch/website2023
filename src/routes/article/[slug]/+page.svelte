@@ -38,7 +38,12 @@
   {/if}
   <div class="content">
     {@html marked.parse(
-      article.content.replaceAll("ar://", `${ARWEAVE_GATEWAY_URL}/`)
+      article.content
+        .replaceAll("ar://", `${ARWEAVE_GATEWAY_URL}/`)
+        .replace(
+          /\nhttps\:\/\/www\.youtube\.com\/watch\?v=([a-zA-Z0-9_]+)\n/g,
+          '<div class="youtube"><iframe src="//www.youtube.com/embed/$1" frameborder="0" allowfullscreen></iframe></div>'
+        )
     )}
   </div>
   <div class="arweave">
@@ -116,5 +121,30 @@
 
   .content :global(code) {
     background: #eee;
+  }
+
+  .content :global(blockquote) {
+    margin: 2rem 0px;
+    padding: 1rem 0px 1rem 3rem;
+    border-left-width: 0.625rem;
+    border-left-style: solid;
+    border-left-color: #ddd;
+    font-style: italic;
+  }
+  .content :global(blockquote) > :global(p:last-child) {
+    margin: 0;
+  }
+
+  .content :global(div.youtube) {
+    margin: 2rem auto;
+    aspect-ratio: 16/9;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 20px 35px 0px,
+      rgba(0, 0, 0, 0.05) 0px 5px 9px 0px;
+  }
+
+  .content :global(div.youtube) > :global(iframe) {
+    display: block;
+    width: 100%;
+    height: 100%;
   }
 </style>
