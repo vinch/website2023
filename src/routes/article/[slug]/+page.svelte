@@ -43,7 +43,7 @@
   </div>
   <div class="arweave">
     <a href="{ARWEAVE_GATEWAY_URL}/{article.txId}" target="_blank"
-      >View on Arweave ↗</a
+      >View on Arweave →</a
     >
   </div>
 </article>
