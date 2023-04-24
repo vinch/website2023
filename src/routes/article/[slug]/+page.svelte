@@ -33,7 +33,9 @@
 <article>
   <h1>{article.title}</h1>
   <div class="date">{format(article.publishDate, "PPP")}</div>
-  <div class="excerpt">{article.excerpt}</div>
+  {#if article.excerpt}
+    <div class="excerpt">{article.excerpt}</div>
+  {/if}
   <div class="content">
     {@html marked.parse(
       article.content.replaceAll("ar://", `${ARWEAVE_GATEWAY_URL}/`)
