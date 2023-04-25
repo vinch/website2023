@@ -84,6 +84,7 @@
     span {
       width: auto;
       text-align: left;
+      font-size: 1rem;
     }
   }
 </style>

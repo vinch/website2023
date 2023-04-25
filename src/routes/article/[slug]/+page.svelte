@@ -65,6 +65,7 @@
     margin-bottom: 0.5rem;
   }
   .date {
+    font-size: 1rem;
     margin-bottom: 3rem;
     color: #999;
   }
