@@ -18,14 +18,14 @@
 </script>
 
 <svelte:head>
-  <title>{article.title}</title>
+  <title>{article.title.replace(/&nbsp;/g, " ")}</title>
   <meta name="description" content={article.excerpt} />
   <meta property="og:description" content={article.excerpt} />
   <meta
     property="og:image"
     content={article.featureImage.replace("ar://", `${ARWEAVE_GATEWAY_URL}/`)}
   />
-  <meta property="og:title" content={article.title} />
+  <meta property="og:title" content={article.title.replace(/&nbsp;/g, " ")} />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://vinch.be/article/{article.id}" />
   <meta name="twitter:card" content="summary" />
@@ -35,11 +35,11 @@
     name="twitter:image:src"
     content={article.featureImage.replace("ar://", `${ARWEAVE_GATEWAY_URL}/`)}
   />
-  <meta name="twitter:title" content={article.title} />
+  <meta name="twitter:title" content={article.title.replace(/&nbsp;/g, " ")} />
 </svelte:head>
 
 <article>
-  <h1>{article.title}</h1>
+  <h1>{@html article.title}</h1>
   <div class="date">{format(article.publishDate, "PPP")}</div>
   {#if article.excerpt}
     <div class="excerpt">{article.excerpt}</div>

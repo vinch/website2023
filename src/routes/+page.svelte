@@ -46,7 +46,7 @@
   {#each data.articles as article}
     <li>
       <span>{format(article.publishDate, "PPP")}</span>
-      <strong><a href="/article/{article.id}">{article.title}</a></strong>
+      <strong><a href="/article/{article.id}">{@html article.title}</a></strong>
     </li>
   {/each}
 </ul>
