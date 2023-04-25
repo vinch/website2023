@@ -42,7 +42,7 @@
         .replaceAll("ar://", `${ARWEAVE_GATEWAY_URL}/`)
         .replace(
           /\nhttps\:\/\/www\.youtube\.com\/watch\?v=([a-zA-Z0-9_]+)\n/g,
-          '<div class="youtube"><iframe src="//www.youtube.com/embed/$1" frameborder="0" allowfullscreen></iframe></div>'
+          '\n<div class="youtube"><iframe src="//www.youtube.com/embed/$1" frameborder="0" allowfullscreen></iframe></div>\n'
         )
     )}
   </div>
