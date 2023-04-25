@@ -1,12 +1,20 @@
 <script lang="ts">
+  import { onMount } from "svelte";
   import { format } from "date-fns";
   import { marked } from "marked";
+  import { browser } from "$app/environment";
 
   export let data: any;
 
   const article = data.article;
 
   const ARWEAVE_GATEWAY_URL = import.meta.env.VITE_ARWEAVE_GATEWAY_URL;
+
+  onMount(() => {
+    if (browser) {
+      document.getElementsByTagName("main")[0].scrollTo(0, 0);
+    }
+  });
 </script>
 
 <svelte:head>

@@ -21,6 +21,7 @@
 <style>
   .container {
     display: flex;
+    height: 100%;
   }
   header {
     padding-top: 3.125rem;
@@ -34,7 +35,7 @@
   }
   main {
     flex: 1;
-    height: 100vh;
+    height: 100%;
     overflow: auto;
     border-left: 1px solid #000;
     padding: 5rem;
