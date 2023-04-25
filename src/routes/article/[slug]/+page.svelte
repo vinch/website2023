@@ -90,15 +90,18 @@
     margin-bottom: 5rem;
   }
   .content :global(p) {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
   .content :global(p:has(> img)) {
-    margin: 2rem 0;
+    margin: 3rem 0;
   }
   .content :global(ul),
   .content :global(ol) {
     padding-left: 4rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .content :global(ul) {
+    list-style-type: square;
   }
   .content :global(li) {
     margin-bottom: 0.25rem;
@@ -123,7 +126,7 @@
   .content :global(h2) {
     font-size: 2rem;
     line-height: 1.25em;
-    margin: 2rem 0px 1rem;
+    margin: 3rem 0px 1.5rem;
     font-weight: 400;
     font-family: "IBM Plex Serif", "Georgia", "Times New Roman", Times, serif;
   }
@@ -145,7 +148,7 @@
   }
 
   .content :global(div.youtube) {
-    margin: 2rem auto;
+    margin: 3rem auto;
     aspect-ratio: 16/9;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 20px 35px 0px,
       rgba(0, 0, 0, 0.05) 0px 5px 9px 0px;
