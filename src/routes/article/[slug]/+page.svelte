@@ -131,8 +131,18 @@
     font-family: "IBM Plex Serif", "Georgia", "Times New Roman", Times, serif;
   }
 
+  .content :global(pre) {
+    background: #fee;
+    display: block;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    overflow: auto;
+  }
+
   .content :global(code) {
-    background: #eee;
+    background: #fee;
+    font-family: "Monaco", monospace;
+    font-size: 0.9em;
   }
 
   .content :global(blockquote) {
