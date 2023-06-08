@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import { format } from "date-fns";
-  import fr from "date-fns/locale/fr";
+  import { fr } from "date-fns/locale";
   import { marked } from "marked";
   import { browser } from "$app/environment";
 
