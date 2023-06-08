@@ -32,7 +32,7 @@ export async function GET({ fetch }: { fetch: any }) {
       },
       channel: {
         title: { _cdata: "Vinch" },
-        description: { _cdata: "Blog of Vincent Battaglia, aka Vinch" },
+        description: { _cdata: "Le blog de Vincent Battaglia, aka Vinch" },
         link: "https://vinch.be",
         item: [],
       },

@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import { format } from "date-fns";
+  import fr from "date-fns/locale/fr";
   import { marked } from "marked";
   import { browser } from "$app/environment";
 
@@ -40,7 +41,11 @@
 
 <article>
   <h1>{@html article.title}</h1>
-  <div class="date">{format(article.publishDate, "PPP")}</div>
+  <div class="date">
+    {format(article.publishDate, "PPP", {
+      locale: fr,
+    })}
+  </div>
   {#if article.excerpt}
     <div class="excerpt">{article.excerpt}</div>
   {/if}
@@ -54,11 +59,11 @@
         )
     )}
   </div>
-  <div class="arweave">
+  <!-- <div class="arweave">
     <a href="{ARWEAVE_GATEWAY_URL}/{article.txId}" target="_blank"
       >View on Arweave →</a
     >
-  </div>
+  </div> -->
 </article>
 
 <style>
@@ -87,7 +92,7 @@
     font-size: 1.2rem;
     line-height: 1.5em;
     font-weight: 400;
-    margin-bottom: 5rem;
+    /* margin-bottom: 5rem; */
   }
   .content :global(p) {
     margin-bottom: 1.5rem;

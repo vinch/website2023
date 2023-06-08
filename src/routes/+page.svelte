@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import { format } from "date-fns";
+  import fr from "date-fns/locale/fr";
   import { browser } from "$app/environment";
 
   export let data: any;
@@ -15,37 +16,44 @@
 </script>
 
 <svelte:head>
-  <title>Blog of Vincent Battaglia, aka Vinch</title>
-  <meta name="description" content="All the articles from Vincent Battaglia" />
+  <title>Le blog de Vincent Battaglia, aka Vinch</title>
+  <meta name="description" content="Tous les articles de Vincent Battaglia" />
   <meta
     property="og:description"
-    content="All the articles from Vincent Battaglia"
+    content="Tous les articles de Vincent Battaglia"
   />
   <meta
     property="og:image"
     content={`${ARWEAVE_GATEWAY_URL}/EjnAIpt6EUtJfhSavQLOjAQiv0ZCdYSfsEB-c7qHIDM`}
   />
-  <meta property="og:title" content="Blog of Vincent Battaglia, aka Vinch" />
+  <meta property="og:title" content="Le blog de Vincent Battaglia, aka Vinch" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://vinch.be" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:creator" content="@vinchbat" />
   <meta
     name="twitter:description"
-    content="All the articles from Vincent Battaglia"
+    content="Tous les articles de Vincent Battaglia"
   />
   <meta
     name="twitter:image:src"
     content={`${ARWEAVE_GATEWAY_URL}/EjnAIpt6EUtJfhSavQLOjAQiv0ZCdYSfsEB-c7qHIDM`}
   />
-  <meta name="twitter:title" content="Blog of Vincent Battaglia, aka Vinch" />
+  <meta
+    name="twitter:title"
+    content="Le blog de Vincent Battaglia, aka Vinch"
+  />
 </svelte:head>
 
 <h1>Blog</h1>
 <ul>
   {#each data.articles as article}
     <li>
-      <span>{format(article.publishDate, "PPP")}</span>
+      <span
+        >{format(article.publishDate, "PPP", {
+          locale: fr,
+        })}</span
+      >
       <strong><a href="/article/{article.id}">{@html article.title}</a></strong>
     </li>
   {/each}
