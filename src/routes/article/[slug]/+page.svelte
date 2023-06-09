@@ -16,6 +16,16 @@
       document.getElementsByTagName("main")[0].scrollTo(0, 0);
     }
   });
+
+  const renderer = new marked.Renderer();
+
+  renderer.link = (href, title, text) => {
+    return `<a href="${href}" rel="external">${text}</a>`;
+  };
+
+  marked.setOptions({
+    renderer,
+  });
 </script>
 
 <svelte:head>
