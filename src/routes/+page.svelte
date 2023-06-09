@@ -1,7 +1,5 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import { format } from "date-fns";
-  import { fr } from "date-fns/locale/index.js";
   import { browser } from "$app/environment";
 
   export let data: any;
@@ -50,9 +48,11 @@
   {#each data.articles as article}
     <li>
       <span
-        >{format(article.publishDate, "PPP", {
-          locale: fr,
-        })}</span
+        >{new Intl.DateTimeFormat("fr", {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        }).format(article.publishDate)}</span
       >
       <strong><a href="/article/{article.id}">{@html article.title}</a></strong>
     </li>

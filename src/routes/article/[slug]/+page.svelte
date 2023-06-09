@@ -1,7 +1,5 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import { format } from "date-fns";
-  import { fr } from "date-fns/locale/index.js";
   import { marked } from "marked";
   import { browser } from "$app/environment";
 
@@ -52,9 +50,11 @@
 <article>
   <h1>{@html article.title}</h1>
   <div class="date">
-    {format(article.publishDate, "PPP", {
-      locale: fr,
-    })}
+    {new Intl.DateTimeFormat("fr", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    }).format(article.publishDate)}
   </div>
   {#if article.excerpt}
     <div class="excerpt">{article.excerpt}</div>
